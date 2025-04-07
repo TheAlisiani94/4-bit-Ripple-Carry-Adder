@@ -20,7 +20,7 @@ module ripple_carry_adder_4bit_tb;
         A = 4'b0000; B = 4'b0000; Cin = 0;
         #10;
 
-        // Test case 2: 1 + 1, Cin = 0 (should produce carry)
+        // Test case 2: 1 + 1, Cin = 0
         A = 4'b0001; B = 4'b0001; Cin = 0;
         #10;
 
@@ -28,7 +28,7 @@ module ripple_carry_adder_4bit_tb;
         A = 4'b0101; B = 4'b0011; Cin = 0;
         #10;
 
-        // Test case 4: 15 + 1, Cin = 0 (should overflow, 15 + 1 = 16)
+        // Test case 4: 15 + 1, Cin = 0 (15 + 1 = 16)
         A = 4'b1111; B = 4'b0001; Cin = 0;
         #10;
 
