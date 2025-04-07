@@ -1,3 +1,13 @@
+// Define the full adder module first
+module full_adder (
+    input a, b, cin,      // Inputs: two bits and carry-in
+    output sum, cout      // Outputs: sum and carry-out
+);
+    assign sum = a ^ b ^ cin;                // Sum = a XOR b XOR cin
+    assign cout = (a & b) | (b & cin) | (a & cin); // Carry-out logic
+endmodule
+
+// Define the 4-bit ripple carry adder module
 module ripple_carry_adder_4bit (
     input [3:0] A, B,    // 4-bit inputs A and B
     input Cin,           // Carry-in
